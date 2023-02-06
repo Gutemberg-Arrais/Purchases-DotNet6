@@ -9,7 +9,7 @@ namespace ApiDotNet6.infra.Data.Maps
     {
         public void Configure(EntityTypeBuilder<Person> builder)
         {
-            builder.ToTable("Person");
+            builder.ToTable("person");
 
             builder.HasKey(c => c.Id);
 

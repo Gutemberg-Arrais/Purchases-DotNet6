@@ -14,6 +14,7 @@ namespace ApiDotNet6.Domain.Entities
         public Product(string name, string codErp, decimal price)
 		{
 			Validation(name, codErp, price);
+			Purchases = new List<Purchase>();
 		}
 
 		public Product(int id,string name, string codErp, decimal price)

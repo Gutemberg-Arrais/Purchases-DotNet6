@@ -7,7 +7,7 @@ namespace ApiDotNet6.Domain.Repositories
 	{
 		Task<Person> GetByIdAsync(int id);
 		Task<ICollection<Person>> GetPeopleAsync();
-		Task<Person> CreatePersonAsync(Person person);
+		Task<Person> CreateAsync(Person person);
 		Task EditAsync(Person person);
 		Task DeleteAsync(Person person);
 	}

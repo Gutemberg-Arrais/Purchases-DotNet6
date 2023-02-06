@@ -14,7 +14,7 @@ namespace ApiDotNet6.infra.Data.Repositories
             _db = db;
 		}
 
-        public async Task<Person> CreatePersonAsync(Person person)
+        public async Task<Person> CreateAsync(Person person)
         {
             _db.Add(person);
             await _db.SaveChangesAsync();

@@ -5,7 +5,7 @@ VisualStudioVersion = 25.0.1700.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiDotNet6.Domain", "ApiDotNet6.Domain\ApiDotNet6.Domain.csproj", "{26182049-1015-46FF-9EE6-4B0472AB6CE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiDotNet6.Infra.Data", "ApiDotNet6.infra.Data\ApiDotNet6.infra.Data.csproj", "{950197B8-018F-467D-BC5D-9043C63FC917}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiDotNet6.Infra.Data", "ApiDotNet6.Infra.Data\ApiDotNet6.Infra.Data.csproj", "{950197B8-018F-467D-BC5D-9043C63FC917}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiDotNet6.Application", "ApiDotNet6.Application\ApiDotNet6.Application.csproj", "{E646F244-3FD3-41AC-9A55-C96E9610480F}"
 EndProject

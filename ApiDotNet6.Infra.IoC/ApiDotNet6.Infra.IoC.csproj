@@ -12,8 +12,17 @@
     <ProjectReference Include="ApiDotNet6.infra.Data">
       <ReferenceSourceTarget></ReferenceSourceTarget>
     </ProjectReference>
+    <ProjectReference Include="..\ApiDotNet6.Infra.Data\ApiDotNet6.Infra.Data.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="ApiDotNet6.infra.Data" />
+    <None Remove="Microsoft.Extensions.DependencyInjection" />
+    <None Remove="Microsoft.Extensions.Configuration" />
+    <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
   </ItemGroup>
 </Project>

@@ -9,4 +9,20 @@
   <ItemGroup>
     <ProjectReference Include="..\ApiDotNet6.Domain\ApiDotNet6.Domain.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="DTOs\" />
+    <None Remove="DTOs\Validations\" />
+    <None Remove="FluentValidation" />
+    <None Remove="Services\" />
+    <None Remove="Services\Interfaces\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DTOs\" />
+    <Folder Include="DTOs\Validations\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\Interfaces\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.4.0" />
+  </ItemGroup>
 </Project>

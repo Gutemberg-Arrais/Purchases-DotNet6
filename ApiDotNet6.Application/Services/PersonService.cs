@@ -33,6 +33,24 @@ namespace ApiDotNet6.Application.Services
 
             return ResultService.Ok<PersonDTO>(_mapper.Map<PersonDTO>(data));
         }
+
+        public async Task<ResultService<ICollection<PersonDTO>>> GetAsync()
+        {
+            var data = await _personRepository.GetPeopleAsync();
+
+            var people = _mapper.Map<ICollection<PersonDTO>>(data);
+            
+            return ResultService.Ok<ICollection<PersonDTO>>(people);
+        }
+
+        public async Task<ResultService<PersonDTO>> GetByIdAsync(int id)
+        {
+            var data = await _personRepository.GetByIdAsync(id);
+
+            var person = _mapper.Map<PersonDTO>(data);
+
+            return ResultService.Ok<PersonDTO>(person);
+        }
     }
 }
 

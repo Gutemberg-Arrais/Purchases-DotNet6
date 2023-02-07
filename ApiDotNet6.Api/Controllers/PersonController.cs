@@ -33,6 +33,33 @@ namespace ApiDotNet6.Api.Controllers
 
             return BadRequest(result);
         }
+
+        [HttpGet]
+        public async Task<ActionResult> GetPeople()
+        {
+            var result = await _personService.GetAsync();
+
+            if (result.IsSuccess)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest(result);
+        }
+
+        [HttpGet]
+        [Route("{id}")]
+        public async Task<ActionResult> GetPeople(int id)
+        {
+            var result = await _personService.GetByIdAsync(id);
+
+            if (result.IsSuccess)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest(result);
+        }
     }
 }
 

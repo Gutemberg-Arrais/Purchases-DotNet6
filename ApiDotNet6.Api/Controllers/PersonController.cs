@@ -22,7 +22,7 @@ namespace ApiDotNet6.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Post([FromBody] PersonDTO personDTO)
+        public async Task<ActionResult> PostAsync([FromBody] PersonDTO personDTO)
         {
             var result = await _personService.CreateAsync(personDTO);
 
@@ -35,7 +35,7 @@ namespace ApiDotNet6.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult> GetPeople()
+        public async Task<ActionResult> GetPeopleAsync()
         {
             var result = await _personService.GetAsync();
 
@@ -49,7 +49,7 @@ namespace ApiDotNet6.Api.Controllers
 
         [HttpGet]
         [Route("{id}")]
-        public async Task<ActionResult> GetPeople(int id)
+        public async Task<ActionResult> GetPeopleAsync(int id)
         {
             var result = await _personService.GetByIdAsync(id);
 

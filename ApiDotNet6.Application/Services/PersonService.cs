@@ -47,6 +47,9 @@ namespace ApiDotNet6.Application.Services
         {
             var data = await _personRepository.GetByIdAsync(id);
 
+            if (data == null)
+                return ResultService.Fail<PersonDTO>("Pessoa não foi encontrada");
+
             var person = _mapper.Map<PersonDTO>(data);
 
             return ResultService.Ok<PersonDTO>(person);

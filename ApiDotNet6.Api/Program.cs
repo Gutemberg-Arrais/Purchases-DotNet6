@@ -1,4 +1,5 @@
-﻿using ApiDotNet6.Infra.IoC;
+﻿using System.Text.Json.Serialization;
+using ApiDotNet6.Infra.IoC;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddServices(builder.Configuration);
+builder.Services.AddMvc().AddJsonOptions(options =>
+    options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+);
 
 var app = builder.Build();
 
